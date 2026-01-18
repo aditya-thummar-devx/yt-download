@@ -1,0 +1,18 @@
+# YouTube Cookies File
+# 
+# INSTRUCTIONS:
+# 1. Install a browser extension like "Get cookies.txt" for Chrome/Firefox
+# 2. Go to youtube.com and make sure you're logged in
+# 3. Click the extension and export cookies for youtube.com
+# 4. Replace this content with your actual cookies
+# 5. Save the file
+#
+# Your cookies should look like this (example):
+# .youtube.com	TRUE	/	TRUE	1699999999	CONSENT	YES+123
+# .youtube.com	TRUE	/	TRUE	1699999999	VISITOR_INFO1_LIVE	abc123def456
+# .youtube.com	TRUE	/	TRUE	1699999999	YSC	ghi789jkl012
+#
+# WARNING: Never share your cookies.txt file as it contains your login session!
+
+# Replace the lines below with your actual YouTube cookies:
+.example.com	TRUE	/	FALSE	0	example_cookie	example_value

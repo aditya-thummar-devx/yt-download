@@ -1,0 +1,5 @@
+node_modules/*
+downloaded-media/*
+download/*
+cookies.txt
+--yes-playlist

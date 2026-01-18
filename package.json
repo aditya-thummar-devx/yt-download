@@ -1,0 +1,20 @@
+{
+  "name": "yt-test-backend",
+  "version": "1.0.0",
+  "description": "YouTube Media Downloader - Download videos and playlists in MP4/WAV formats",
+  "main": "download-videos.js",
+  "scripts": {
+    "start": "node download-videos.js"
+  },
+  "keywords": [
+    "youtube",
+    "download",
+    "media",
+    "mp4",
+    "wav",
+    "playlist"
+  ],
+  "author": "",
+  "license": "MIT",
+  "packageManager": "yarn@4.9.2"
+}
