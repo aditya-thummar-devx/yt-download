@@ -19,6 +19,7 @@ const extractPlaylistName = async (url) => {
       '--no-download',
       '--playlist-items', '1', // Only process the first video to get playlist metadata
       '--socket-timeout', '5', // Set socket timeout to 5 seconds
+      '--no-check-certificates', // Bypass SSL certificate verification (fixes macOS SSL issues)
       url
     ];
     
@@ -130,18 +131,20 @@ const downloadVideo = (url, downloadDir, isPlaylist = false, format = 'mp4') => 
     let errorOutput = '';
     const args = [
       '-o', `${downloadDir}/%(title)s.%(ext)s`,
-      '--no-playlist'
+      '--no-check-certificate' // Bypass SSL certificate verification (fixes macOS SSL issues)
     ];
+    
+    // Add playlist flag based on isPlaylist
+    if (isPlaylist) {
+      args.push('--yes-playlist');
+    } else {
+      args.push('--no-playlist');
+    }
     
     // Add cookies if available
     if (hasCookies()) {
       args.push('--cookies', 'cookies.txt');
       console.log('Using cookies for authentication...');
-    }
-    
-    if (isPlaylist) {
-      args.pop(); // Remove --no-playlist
-      args.push('--yes-playlist');
     }
     
     // Add format-specific arguments
